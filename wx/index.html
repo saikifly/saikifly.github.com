@@ -155,21 +155,18 @@
     <span style="font-family: 微软雅黑;">&nbsp;<span style="font-size: 14px; font-family: 微软雅黑;">丙申秋分日&nbsp;&nbsp;&nbsp;</span></span>
 </h2>
     <script>
-        $(document).on('click', '<img/>',function(event) {
-            var imgArray = [];
-            var curImageSrc = $(this).attr('src');
-            var oParent = $(this).parent();
-            if (curImageSrc && !oParent.attr('href')) {
-                $('<img/>').each(function(index, el) {
-                    var itemSrc = $(this).attr('src');
-                    imgArray.push(itemSrc);
-                });
-                wx.previewImage({
-                    current: curImageSrc,
-                    urls: imgArray
-                });
-            }
+    var $images = $("img");
+
+      var imgPaths = [];
+      $images.each(function(){
+        imgPaths.push(this.src);
+      });
+      $images.on("click",function(){
+        wx.previewImage({
+            current: this.src,
+            urls: imgPaths
         });
+      });
     </script>
     </body>
 </html>
