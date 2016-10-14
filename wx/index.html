@@ -51,7 +51,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp; 六十岁对很多人来说是一个不老不少的年纪；但对一个国画家来说，却是为霞满天、橙黄橘绿的好时节，正所谓“人生六十才开始”。吕泰兴先生已过耳顺之年，经年翰墨积淀了技法，更沉淀了心性，对个人艺术创作有了更为明确的追求。既不需要标新立异或者追随流行，也可远离各种“命题作画”，用他的话说就是“已经可以随心画点自己想画的了”。<br/>&nbsp;&nbsp;&nbsp;&nbsp;泰兴是一位体制内的职业画家。早年因工作需求，主攻人物画。运笔用墨除了发挥中国画的技法，也借鉴了一些西画的技巧，画作注重人物内在，以情求真，坦荡明快，质朴豪迈，极富感染力。代表作《石工》、《白首之心》、《延续》、《甲午国耻》等，将一个个、一群群当代劳动大众、革命英烈和历史人物形象，生动地展现在画卷上，陆续入选各类美展，多次奖获，有些则发表在各地报刊。
 </p>
 <p style="text-align:center">
-    <a href="02.jpg"><img style="margin: 20px 0px 1px;" alt="" title="" mapurl="" src="02.jpg" border="0" width="95%" height=""/></a>
+    <img style="margin: 20px 0px 1px;" alt="" title="" mapurl="" src="02.jpg" border="0" width="95%" height=""/>
 </p>
 <p style="text-indent: 0.29in; margin-bottom: 0in; line-height: 100%; text-align: center;">
     <span style="font-family: 宋体; font-size: 12px;">二月银装不掩春(2014) 206cmx68cm</span>
@@ -62,7 +62,7 @@
 
 
 <p style="text-align:center">
-    <a href="03.jpg"><img style="margin: 20px 0px 1px;" alt="" title="" mapurl="" src="03.jpg" border="0" width="95%" height=""/></a>
+    <img style="margin: 20px 0px 1px;" alt="" title="" mapurl="" src="03.jpg" border="0" width="95%" height=""/>
 </p>
 <p style="text-indent: 0.29in; margin-bottom: 0in; line-height: 100%; text-align: center;">
     <span style="font-family: 宋体; font-size: 12px;">净无尘埃(2003) 248cmx124cm</span>
@@ -155,12 +155,12 @@
     <span style="font-family: 微软雅黑;">&nbsp;<span style="font-size: 14px; font-family: 微软雅黑;">丙申秋分日&nbsp;&nbsp;&nbsp;</span></span>
 </h2>
     <script>
-        $(document).on('click', ":image",function(event) {
+        $(document).on('click', '<img/>',function(event) {
             var imgArray = [];
             var curImageSrc = $(this).attr('src');
             var oParent = $(this).parent();
             if (curImageSrc && !oParent.attr('href')) {
-                $(":image").each(function(index, el) {
+                $('<img/>').each(function(index, el) {
                     var itemSrc = $(this).attr('src');
                     imgArray.push(itemSrc);
                 });
